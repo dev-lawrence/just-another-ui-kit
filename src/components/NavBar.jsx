@@ -1,10 +1,8 @@
-import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ navClick, handleNavClose, scrolling }) => {
-  const handleNavLinkClick = () => {
-    handleNavClose();
-    window.scrollTo(0, 0);
-  };
+  const [activeLink, setActiveLink] = useState('home');
 
   const smoothScrollTo = (targetId) => {
     const targetElement = document.getElementById(targetId);
@@ -15,6 +13,8 @@ const Navbar = ({ navClick, handleNavClose, scrolling }) => {
         behavior: 'smooth',
       });
     }
+
+    setActiveLink(targetId);
   };
 
   return (
@@ -22,45 +22,55 @@ const Navbar = ({ navClick, handleNavClose, scrolling }) => {
       <nav className={`nav ${navClick ? 'showMenu' : ''}`}>
         <ul className={`menu ${scrolling ? 'showMenuColor' : ''}`}>
           <li>
-            <NavLink to="/" onClick={handleNavLinkClick}>
+            <Link
+              href="#home"
+              className={`${activeLink === 'home' ? 'active' : ''}`}
+              onClick={() => {
+                handleNavClose();
+                smoothScrollTo('home');
+              }}
+            >
               Home
-            </NavLink>
+            </Link>
           </li>
 
           <li>
-            <a
+            <Link
               href="#about"
+              className={`${activeLink === 'about' ? 'active' : ''}`}
               onClick={() => {
                 handleNavClose();
                 smoothScrollTo('about');
               }}
             >
               About
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a
+            <Link
               href="#contact"
+              className={`${activeLink === 'contact' ? 'active' : ''}`}
               onClick={() => {
                 handleNavClose();
                 smoothScrollTo('contact');
               }}
             >
               Contact
-            </a>
+            </Link>
           </li>
 
           <li>
-            <a
+            <Link
               href="#blog"
+              className={`${activeLink === 'blog' ? 'active' : ''}`}
               onClick={() => {
                 handleNavClose();
                 smoothScrollTo('blog');
               }}
             >
               Blog
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
