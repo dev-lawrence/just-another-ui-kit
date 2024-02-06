@@ -62,11 +62,11 @@ const Navbar = ({ navClick, handleNavClose, scrolling }) => {
 
           <li>
             <Link
-              href="#blog"
-              className={`${activeLink === 'blog' ? 'active' : ''}`}
+              href="#footer-section"
+              className={`${activeLink === 'footer-section' ? 'active' : ''}`}
               onClick={() => {
                 handleNavClose();
-                smoothScrollTo('blog');
+                smoothScrollTo('footer-section');
               }}
             >
               Blog

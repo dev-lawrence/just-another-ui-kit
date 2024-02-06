@@ -1,3 +1,5 @@
+import ContactImg from '../assets/contact-img.png';
+
 const Home = () => {
   return (
     <>
@@ -38,39 +40,39 @@ const Home = () => {
         </div>
 
         {/* Supported */}
-        <div id="blog" className="supported pt-section">
+        <div className="supported pt-section">
           <h2>Supported and backed by:</h2>
           <div className="d-grid">
             <div className="text">
-              <p>Lorem</p>
+              <p>Industry-leading developers</p>
             </div>
 
             <div className="text">
-              <p>Ipsum</p>
+              <p>Open-source community</p>
             </div>
 
             <div className="text">
-              <p>Dolor</p>
+              <p>Technology enthusiasts</p>
             </div>
 
             <div className="text">
-              <p>Sit</p>
+              <p>Innovative startups</p>
             </div>
 
             <div className="text">
-              <p>Dolor</p>
+              <p>Passionate contributors</p>
             </div>
 
             <div className="text">
-              <p>Sit</p>
+              <p>Global collaborators</p>
             </div>
 
             <div className="text">
-              <p>Lorem</p>
+              <p>Forward-thinking organizations</p>
             </div>
 
             <div className="text">
-              <p>Ipsum</p>
+              <p>Development agencies</p>
             </div>
           </div>
           <div className="more-product">
@@ -88,57 +90,34 @@ const Home = () => {
             <h2>About</h2>
 
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor
-              sit amet consectetur adipiscing elit pellentesque habitant. Cras
-              pulvinar mattis nunc sed blandit libero volutpat. Odio ut enim
-              blandit volutpat maecenas volutpat. Sapien eget mi proin sed
-              libero enim. Amet facilisis magna etiam tempor. Facilisi cras
-              fermentum odio eu feugiat pretium nibh. Nibh tellus molestie nunc
-              non blandit. Integer enim neque volutpat ac tincidunt vitae semper
-              quis. Gravida rutrum quisque non tellus. Et pharetra pharetra
-              massa massa ultricies mi quis. Nisl rhoncus mattis rhoncus urna
-              neque viverra justo nec. Eget sit amet tellus cras adipiscing enim
-              eu turpis. Volutpat commodo sed egestas egestas fringilla. Dui
-              accumsan sit amet nulla. Morbi quis commodo odio aenean sed
-              adipiscing. Elementum nisi quis eleifend quam adipiscing vitae
-              proin sagittis nisl. Interdum posuere lorem ipsum dolor. Dolor
-              magna eget est lorem ipsum dolor. Nibh nisl condimentum id
-              venenatis.
+              Welcome to JustAnotherUIKit, where our fascinating journey in the
+              realm of web development unfolds. Here, we embark on a shared
+              mission, fueled by a profound passion for creating transformative
+              tools and solutions. Our commitment extends beyond mere
+              technology; we strive to make a lasting impact by fostering
+              innovation, inclusivity, and empowerment for developers across the
+              globe.
             </p>
 
             <p>
-              Aenean vel elit scelerisque mauris pellentesque pulvinar
-              pellentesque habitant. Interdum consectetur libero id faucibus
-              nisl tincidunt eget nullam non. Mi bibendum neque egestas congue
-              quisque egestas diam in arcu. Fermentum odio eu feugiat pretium
-              nibh ipsum consequat nisl vel. Arcu dictum varius duis at
-              consectetur lorem. In nibh mauris cursus mattis molestie. Velit ut
-              tortor pretium viverra suspendisse potenti nullam ac. Vivamus at
-              augue eget arcu dictum varius. Ullamcorper malesuada proin libero
-              nunc consequat interdum varius sit. Volutpat odio facilisis mauris
-              sit amet massa vitae tortor condimentum. Morbi quis commodo odio
-              aenean sed adipiscing diam donec. Nullam vehicula ipsum a arcu.
-              Arcu non odio euismod lacinia at. Odio tempor orci dapibus
-              ultrices in iaculis.
+              Over the course of our evolution, JustAnotherUIKit has flourished
+              into a dynamic community, a melting pot of talents and ideas.
+              Developers, designers, and tech enthusiasts converge in this space
+              to not only push the boundaries of web development but also to
+              contribute to a culture of continuous learning and collaboration.
+              Our growth has been enriched by the diversity of perspectives and
+              the collective drive towards excellence.
             </p>
 
             <p>
-              Felis eget velit aliquet sagittis id consectetur purus ut
-              faucibus. Est velit egestas dui id. Ipsum a arcu cursus vitae
-              congue mauris rhoncus aenean vel. Sed felis eget velit aliquet
-              sagittis id consectetur. Consequat interdum varius sit amet
-              mattis. Adipiscing elit pellentesque habitant morbi tristique.
-              Elit eget gravida cum sociis natoque penatibus et magnis dis. Sit
-              amet nisl purus in mollis nunc. In nulla posuere sollicitudin
-              aliquam. Ut tortor pretium viverra suspendisse potenti. Facilisi
-              etiam dignissim diam quis enim. Consectetur purus ut faucibus
-              pulvinar elementum integer enim neque volutpat. Pellentesque massa
-              placerat duis ultricies lacus. Donec massa sapien faucibus et
-              molestie. Ac turpis egestas sed tempus urna et pharetra. At lectus
-              urna duis convallis convallis tellus. Egestas diam in arcu cursus
-              euismod quis viverra. Malesuada nunc vel risus commodo viverra
-              maecenas accumsan lacus vel.
+              At the core of our ethos lies a commitment to crafting
+              cutting-edge tools that transcend accessibility barriers. We
+              firmly believe in the transformative power of collaboration and
+              community-driven development. Our vibrant ecosystem is not just
+              about providing solutions; it's a catalyst for shaping the digital
+              landscape. Through inclusive practices, we aim to unlock new
+              dimensions of creativity and redefine the future of digital
+              experiences.
             </p>
           </div>
         </div>
@@ -147,37 +126,43 @@ const Home = () => {
         <div id="contact" className="contact">
           <div className="container">
             <h2>Contact</h2>
+
+            <div className="d-grid">
+              <form
+                onSubmit={(event) => {
+                  event.preventDefault();
+                }}
+                className="form"
+              >
+                <h4>Fill out this form to reach us</h4>
+
+                <div className="row">
+                  <div className="input-control">
+                    <input type="text" placeholder="First name" />
+                  </div>
+
+                  <div className="input-control">
+                    <input type="text" placeholder="Last name" />
+                  </div>
+                </div>
+
+                <div className="input-control">
+                  <input type="text" placeholder="Email" />
+                </div>
+
+                <div className="input-control">
+                  <input type="text" placeholder="Phone (optional)" />
+                </div>
+
+                <textarea cols="30" rows="10" placeholder="Message"></textarea>
+                <button className="btn">Send</button>
+              </form>
+
+              <div className="img">
+                <img src={ContactImg} loading="lazy" alt="" />
+              </div>
+            </div>
           </div>
-
-          <form
-            onSubmit={(event) => {
-              event.preventDefault();
-            }}
-            className="form"
-          >
-            <h4>Fill out this form to reach us</h4>
-
-            <div className="row">
-              <div className="input-control">
-                <input type="text" placeholder="First name" />
-              </div>
-
-              <div className="input-control">
-                <input type="text" placeholder="Last name" />
-              </div>
-            </div>
-
-            <div className="input-control">
-              <input type="text" placeholder="Email" />
-            </div>
-
-            <div className="input-control">
-              <input type="text" placeholder="Phone (optional)" />
-            </div>
-
-            <textarea cols="30" rows="10" placeholder="Message"></textarea>
-            <button className="btn">Send</button>
-          </form>
         </div>
       </section>
     </>
