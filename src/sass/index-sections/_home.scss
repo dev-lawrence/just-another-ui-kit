@@ -3,6 +3,7 @@
 .home {
   position: relative;
 
+  // Hero
   .hero {
     z-index: 1;
 
@@ -76,6 +77,142 @@
           fill: #000;
         }
       }
+    }
+  }
+
+  // Supported
+  .supported {
+    padding-inline: 1rem;
+    text-align: center;
+    max-width: 700px;
+    margin-inline: auto;
+
+    h2 {
+      font-size: $fs-300;
+      margin-bottom: 1rem;
+    }
+
+    .d-grid {
+      @include grid(repeat(2, 1fr), 1rem);
+
+      @include medium {
+        @include grid(repeat(4, 1fr), 1rem);
+      }
+    }
+
+    .text {
+      background-color: var(--clr-neutral-200);
+      color: var(--clr-neutral-900);
+      padding: 0.7rem 1rem;
+
+      p {
+        font-weight: 700;
+        font-size: $fs-400;
+      }
+    }
+
+    .more-product {
+      margin-top: 2rem;
+      max-width: 500px;
+      margin-inline: auto;
+
+      h3 {
+        font-size: $fs-600;
+      }
+
+      span {
+        color: var(--clr-primary-400);
+      }
+    }
+  }
+
+  // About
+  .about {
+    padding-top: 10rem;
+
+    h2 {
+      font-size: $fs-650;
+      margin-bottom: 1.5rem;
+
+      @include medium {
+        font-size: $fs-700;
+      }
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  // Contact
+  .contact {
+    padding-top: 10rem;
+
+    h2 {
+      font-size: $fs-650;
+      margin-bottom: 1.5rem;
+
+      @include medium {
+        font-size: $fs-700;
+      }
+    }
+  }
+
+  // Form
+  .form {
+    margin-top: 1rem;
+    padding-inline: 1rem;
+    text-align: center;
+    display: grid;
+    max-width: 700px;
+    margin-inline: auto;
+
+    h4 {
+      font-size: $fs-400;
+      margin-bottom: 1.5rem;
+    }
+
+    .input-control {
+      margin-bottom: 2rem;
+    }
+
+    input,
+    textarea {
+      padding: 0.75rem;
+      width: 100%;
+      background-color: #d9d9d9;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+
+    ::placeholder {
+      color: #757070;
+      font-size: 0.9rem;
+    }
+
+    .row {
+      margin-bottom: 2rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 3rem;
+      .input-control {
+        margin-bottom: 0;
+
+        input {
+          width: 100%;
+        }
+      }
+    }
+
+    .btn {
+      margin-top: 1rem;
+      background-color: var(--clr-primary-300);
+      font-size: 1.1rem;
+      color: #0d0e30;
+      border-radius: 0;
+      width: 30%;
+      margin-inline: auto;
     }
   }
 }
